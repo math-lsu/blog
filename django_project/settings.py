@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',     # new
     'accounts.apps.AccountsConfig',
@@ -122,6 +123,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / "static"]    # new
+STATIC_ROOT = BASE_DIR / "staticfiles"      # new
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"   # new
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
