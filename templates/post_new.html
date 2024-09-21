@@ -1,10 +1,26 @@
-<!-- templates/post_new.html -->
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
-<h1>New post</h1>
-<form action="" method="post">{% csrf_token %}
-    {{ form.as_p }}
+<h1>New Post</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    
+    <!-- Display form errors if any -->
+    {% if form.non_field_errors %}
+        <div class="error">
+            {{ form.non_field_errors }}
+        </div>
+    {% endif %}
+    
+    <!-- Render form fields with optional styling -->
+    <div class="form-group">
+        {{ form.as_p }}
+    </div>
+
+    <!-- Submit button -->
     <input type="submit" value="Save">
+
+    <!-- Optional cancel button to go back to the home page -->
+    <a href="{% url 'home' %}">Cancel</a>
 </form>
 {% endblock content %}

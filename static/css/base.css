@@ -4,10 +4,22 @@ body {
     font-size: 18px;
 }
 
+.centered-content {
+    max-width: 1500px;  /* Adjust this width based on your preference */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;  /* Optional: To give some inner spacing */
+    text-align: center;  /* Optional: To center the text content */
+}
+
 header {
     border-bottom: 1px solid #999;
     margin-bottom: 2rem;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
 }
 
 header h1 a {
@@ -22,6 +34,11 @@ header h1 a {
 .nav-right {
     display: flex;
     padding-top: 2rem;
+}
+
+.nav-left, .nav-center, .nav-right {
+    flex: 1; /* Make each section take up equal space */
+    text-align: center; /* Center the text inside each div */
 }
 
 .post-entry {
@@ -45,4 +62,70 @@ header h1 a {
 
 .post-entry h2 a:hover {
     color: red;
+}
+
+/* Post content styles */
+.post-body {
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.7;
+    color: #333;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+.post-body h2, .post-body h3 {
+    color: #4CAF50;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Paragraphs */
+.post-body p {
+    margin-bottom: 15px;
+}
+
+/* Lists */
+.post-body ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+.post-body ul li {
+    margin-bottom: 10px;
+}
+
+/* Images */
+.post-body img {
+    max-width: 30%;
+    height: auto;
+    margin: 20px 0;
+    display: block;
+}
+
+/* Blockquotes */
+.post-body blockquote {
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    border-left: 5px solid #4CAF50;
+    font-style: italic;
+}
+
+/* Links */
+.post-body a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.post-body a:hover {
+    text-decoration: underline;
+}
+
+/* Additional spacing for the post entry */
+.post-entry {
+    margin-bottom: 40px;
 }

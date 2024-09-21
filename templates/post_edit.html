@@ -1,10 +1,25 @@
-<!-- templates/post_edit.html -->
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 <h1>Edit post</h1>
-<form action="" method="post">{% csrf_token %}
-    {{ form.as_p }}
-<input type="submit" value="Update">
+<form action="" method="post">
+    {% csrf_token %}
+    <!-- Display form errors if any -->
+    {% if form.non_field_errors %}
+        <div class="error">
+            {{ form.non_field_errors }}
+        </div>
+    {% endif %}
+    
+    <!-- Render form with styling (optional) -->
+    <div class="form-group">
+        {{ form.as_p }}
+    </div>
+
+    <!-- Submit button -->
+    <input type="submit" value="Update">
+
+    <!-- Cancel button to go back to the post detail view -->
+    <a href="{% url 'post_detail' post.pk %}">Cancel</a>
 </form>
 {% endblock content %}

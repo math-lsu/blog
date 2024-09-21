@@ -1,0 +1,122 @@
+<!-- templates/about.html -->
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="centered-content">
+        <h1>About Me</h1>
+        <img src="{% static 'images/Genaro Gonzalez.png' %}" alt="Genaro Gonzalez" style="width: 30%;">
+        <h3>Hello! I'm Genaro Gonz&aacute;lez, the creator of this blog.</h3>
+        ✉ genaro.gonzalez@gmail.com
+        <p>Here's a little bit about me.</p>
+    </div>
+    <div>
+    <h2>Resume</h2>
+    <ul>
+        <li><strong>Higher Education</strong></li>
+        <hr/>
+            <p>
+            <ul>
+                <li>
+                  
+                  1990 - 1995. Ph.D. Louisiana State University. Math Department
+                  Dissertation: Locally Generated Semigroups.
+                </li>
+
+                <li>
+                  1987 - 1989. M.Sc. Universidad de los Andes, Mérida, Venezuela. Math Department
+                  Thesis title: Application of the Polya Enumeration Theory.
+                </li>
+
+                <li>
+                  1982 - 1987. Licenciado en Matematicas. Universidad del Zulia, Maracaibo,
+                  Venezuela.
+                </li>
+            </ul>
+            </p>
+        <li>
+            <strong>Work Experience</strong>
+        <hr/>
+            <p>
+            <ul>
+                <li>1984-1987 Math Instructor, Universidad de los Andes. Mérida, Venezuela.</li>
+                <li>1987-1990 Assistant Professor, Universidad del Zulia. Maracaibo, Venezuela.</li>
+                <li>1990-1995 Teaching Assistant, Louisiana State University. Baton Rouge, USA.</li>
+                <li>1995-2004 Full Math Professor, Universidad del Zulia. Maracaibo, Venezuela.</li>
+                <li>2004-2005 Visiting Professor, Louisiana State University. Baton Rouge, USA.</li>
+                <li>2005-2009 Full Math Professor, Universidad del Zulia. Maracaibo, Venezuela.</li>
+                <li>2016 - 2024 Professor Emeritus, Universidad del Zulia. Maracaibo, Venezuela.</li>
+            </ul>
+            </p>
+
+            <p>
+                    I taught the following courses at university level: Calculus at all levels,
+                Algebra, Lineal Algebra, Commutative Algebra, Abstract Algebra at all
+                levels, Real and Complex Analysis, Topology and Algebraic Topology,
+                Geometry and Differential Geometry, Lie Groups and Lie Algebras and many other elective courses.
+                I also worked as a thesis advisor of several math students in the school of sciences of Universidad del Zulia in Maracaibo, Venezuela.
+            </p>
+
+            <p>
+                From 1997 to 1999 I worked as a Director of the Mathematics Department from The School of Science of la Universidad del Zulia and from 1999 to 2003 I worked as a Director of Graduate Studies of the same School.
+            </p>
+
+            <p>
+                I used the following computer tools as teaching resources: Latex, Mathematica,
+                Matlab, Maplex, Python, Linux Ubuntu, Power Point, and others.
+            </p>
+
+            <p>
+                Over the last several years, I have been involved in software development
+                projects carried out in-house that manages student enrollment and courses
+                administration, bloggin, ecommerce and general programmming mainly using Python,
+                Django, Pandas, Matplotlib, Numpy, and javascript as well as HTML, CSS, git, GitHub
+                and Heroku for deployment.
+            </p> 
+
+            
+        <li><strong>Research Publications</strong></li>
+        <hr/>
+            <p>
+                <ul>
+                  <li>
+                    Fourier series. Fourier transforms and applications. Divulgaciones
+                    Matemáticas 5.1-2 (1997): 43-60
+                    <a href="http://eudml.org/doc/48044" target="_blank">View Paper</a>
+                  </li>
+                  <li>
+                    Closed congruences on semigroups. Divulgaciones Matemáticas 9.1
+                    (2001): 103-107.
+                    <a href="http://eudml.org/doc/48044" target="_blank">View Paper</a>
+                  </li>
+                </ul>
+            </p>
+
+            
+
+        </li>
+        <li><strong>Skills</strong></li>
+        <hr>
+            <p>
+                <ul>
+                    <li>Python, Pandas, Numpy, Matplotlib, Django, VisualStudioCode</li>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>MySQL, SqlLite, Workbench</li>
+                    <li>git, GitHub, Heroku</li>
+                    <li> Matlab, Octave, C</li>
+                </ul>
+            </p>
+        <li><strong>Hobbies</strong></li>
+        <hr>
+            <p>
+                <ul>
+                    <li>Exercising: Walking, Swimming, Hiking</li>
+                    <li>Playing Chess</li>
+                    <li>Read: History, Literature, Physics, Sci Fi</li>
+                    <li>Listening to music: Classical, Rock, Pop, Spanish, Latin and Italian music.</li>
+                    <li>Making Arduino Projects: Computer Science, Electronics, Electricity and Magnetism</li>
+                </ul>
+            </p>
+    </ul>
+    </div>
+{% endblock content %}

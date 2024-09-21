@@ -1,10 +1,12 @@
-<!-- templates/post_detail.html -->
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 <div class="post-entry">
     <h2>{{ post.title }}</h2>
-    <p>{{ post.body }}</p>
+    <!-- Render post body with HTML using the |safe filter -->
+    <div class="post-body">
+        {{ post.body|safe }}
+    </div>
 </div>
 
 <a href="{% url 'post_edit' post.pk %}">+ Edit Blog Post</a>

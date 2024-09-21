@@ -1,11 +1,14 @@
-<!-- templates/home.html -->
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 {% for post in post_list %}
     <div class="post-entry">
         <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
-        <p>{{ post.body }}</p>
+        <!-- Show a preview of the post body with HTML content rendered -->
+        <div class="post-body">
+            {{ post.body|truncatewords:40|safe }} <!-- Adjust '30' to the desired preview length -->
+        </div>
+        <a href="{% url 'post_detail' post.pk %}">Read more</a>
     </div>
 {% endfor %}
 {% endblock content %}
